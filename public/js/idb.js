@@ -1,7 +1,7 @@
 // create variable to hold db connection
 let db;
-// establish a connection to IndexedDB database called 'budget_tracker' and set it to version 1
-const request = indexedDB.open('budget_tracker', 1);
+// establish a connection to IndexedDB database called 'budget' and set it to version 1
+const request = indexedDB.open('budget', 1);
 
 // this event will emit if the database version changes (nonexistant to version 1, v1 to v2, etc.)
 request.onupgradeneeded = function(event) {
@@ -33,10 +33,10 @@ function saveRecord(record) {
     const transaction = db.transaction(['pending_balance'], 'readwrite');
   
     // access the object store for `pending_balance`
-    const bank = transaction.objectStore('pending_balance');
+    const store = transaction.objectStore('pending_balance');
   
     // add record to your store with add method
-    bank.add(record);
+    store.add(record);
 }
 
 // a function that will handle collecting all of the data from the pending_balance object store in IndexedDB and POST it to the server
@@ -45,10 +45,10 @@ function uploadBalance() {
     const transaction = db.transaction(['pending_balance'], 'readwrite');
   
     // access your object store
-    const bank = transaction.objectStore('pending_balance');
+    const store = transaction.objectStore('pending_balance');
   
     // get all records from store and set to a variable
-    const getAll = bank.getAll();
+    const getAll = store.getAll();
         // upon a successful .getAll() execution, run this function
         getAll.onsuccess = function() {
             // if there was data in indexedDb's store, let's send it to the api server
@@ -69,9 +69,9 @@ function uploadBalance() {
                 // open one more transaction
                 const transaction = db.transaction(['pending_balance'], 'readwrite');
                 // access the pending_balance object store
-                const bank = transaction.objectStore('pending_balance');
+                const store = transaction.objectStore('pending_balance');
                 // clear all items in your store
-                bank.clear();
+                store.clear();
 
                 alert('All pending balances have been submitted!');
                 })
