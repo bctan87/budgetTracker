@@ -38,7 +38,7 @@ Demo Video: https://drive.google.com/file/d/1YmtAlSUl2E-5wEcJJV7iRmrtRz1M6YN5/vi
 
 Heroku: https://tanb-budget-tracker.herokuapp.com/
 
-Link to Repo: https://github.com/bctan87/socialNetworkAPI
+Link to Repo: https://github.com/bctan87/budgetTracker
 
 ## Credits
 
