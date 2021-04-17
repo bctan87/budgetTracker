@@ -12,6 +12,17 @@ The goal of this project is to update an existing budget tracker application to 
 
 `SO THAT my account balance is accurate when I am traveling `
 
+## Acceptance Criteria
+
+`GIVEN a budget tracker without an internet connection`
+
+`WHEN the user inputs an expense or deposit`
+
+`THEN they will receive a notification that they have added an expense or deposit`
+
+`WHEN the user reestablishes an internet connection`
+
+`THEN the deposits or expenses added while they were offline are added to their transaction history and their totals are updated`
 
 ## Installation
 
@@ -23,11 +34,9 @@ npm start
 
 ## Links
 
-Demo Videos: 
+Demo Video: https://drive.google.com/file/d/1YmtAlSUl2E-5wEcJJV7iRmrtRz1M6YN5/view
 
-Part I - https://drive.google.com/file/d/18x9u3W_bUtsnp5VWUy5yMGpKvOw1K_Wi/view
-
-Part II - https://drive.google.com/file/d/1HXF4a6OYvKxjjjt5bgn3tpnzkrRuHaMd/view
+Heroku - https://tanb-budget-tracker.herokuapp.com/
 
 Link to Repo: https://github.com/bctan87/socialNetworkAPI
 
