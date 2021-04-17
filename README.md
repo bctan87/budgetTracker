@@ -36,7 +36,7 @@ npm start
 
 Demo Video: https://drive.google.com/file/d/1YmtAlSUl2E-5wEcJJV7iRmrtRz1M6YN5/view
 
-Heroku - https://tanb-budget-tracker.herokuapp.com/
+Heroku: https://tanb-budget-tracker.herokuapp.com/
 
 Link to Repo: https://github.com/bctan87/socialNetworkAPI
 
